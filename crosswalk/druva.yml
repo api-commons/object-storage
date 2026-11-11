@@ -1,0 +1,29 @@
+provider: druva
+apis_io: https://apis.io/providers/druva/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: Name
+      created_at: CreationDate
+      id: Id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/druva-aws-native-openapi-original.json#GET /organizations/{organization_id}/accounts/{account_id}/buckets/{bucket_id}
+    - openapi/_original/druva-aws-native-openapi.json#GET /organizations/{organization_id}/accounts/{account_id}/buckets/{bucket_id}
+    - openapi/_original/druva-cloudranger-openapi-original.json#GET /organizations/{organization_id}/accounts/{account_id}/buckets/{bucket_id}
+    - openapi/_original/druva-cloudranger-openapi.json#GET /organizations/{organization_id}/accounts/{account_id}/buckets/{bucket_id}
+  storage_object:
+    path_segment:
+    - keys
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/druva-aws-native-openapi-original.json#GET /organizations/{organization_id}/accounts/{account_id}/backups/tags/keys
+    - openapi/_original/druva-aws-native-openapi-original.json#GET /organizations/{organization_id}/accounts/{account_id}/environments/{environment_id}/servers/tags/keys
+    - openapi/_original/druva-aws-native-openapi-original.json#GET /organizations/{organization_id}/accounts/{account_id}/schedules/tags/keys
+    - openapi/_original/druva-aws-native-openapi-original.json#GET /organizations/{organization_id}/accounts/{account_id}/servers/tags/keys
+    - openapi/_original/druva-aws-native-openapi-original.json#GET /organizations/{organization_id}/accounts/{account_id}/volumes/tags/keys

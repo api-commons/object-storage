@@ -1,0 +1,32 @@
+provider: crusoe
+apis_io: https://apis.io/providers/crusoe/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: name
+      created_at: created_at
+      region: location
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#DELETE /projects/{project_id}/storage/s3/buckets/{bucket_name}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/storage/s3/buckets
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /projects/{project_id}/storage/s3/buckets/{bucket_name}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#PATCH /projects/{project_id}/storage/s3/buckets/{bucket_name}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#POST /projects/{project_id}/storage/s3/buckets
+  storage_object:
+    path_segment:
+    - keys
+    properties:
+      created_at: created_at
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#DELETE /organizations/{org_id}/storage/s3/keys/{access_key_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#GET /organizations/{org_id}/storage/s3/keys
+    - openapi/_original/crusoe-cloud-api-gateway-v1-openapi.json#POST /organizations/{org_id}/storage/s3/keys
+    - openapi/_original/crusoe-cloud-api-gateway-v1alpha5-openapi.json#DELETE /organizations/{org_id}/storage/s3/keys/{access_key_id}
+    - openapi/_original/crusoe-cloud-api-gateway-v1alpha5-openapi.json#GET /organizations/{org_id}/storage/s3/keys

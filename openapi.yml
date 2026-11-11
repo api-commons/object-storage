@@ -1,0 +1,212 @@
+openapi: 3.1.0
+info:
+  title: Object Storage (API Commons)
+  version: 0.1.0-draft.20261111
+  description: 'The common Object Storage interface, distilled from the harvested OpenAPI of 121 providers in the
+    APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /buckets:
+    get:
+      operationId: listBuckets
+      summary: List buckets
+      tags:
+      - Buckets
+      x-commons-tier: core
+      x-commons-share: 0.905
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Bucket'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createBucket
+      summary: Create a bucket
+      tags:
+      - Buckets
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /buckets/{bucket_id}:
+    parameters:
+    - $ref: '#/components/parameters/bucket_id'
+    delete:
+      operationId: deleteBucket
+      summary: Delete a bucket
+      tags:
+      - Buckets
+      x-commons-tier: core
+      x-commons-share: 0.762
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    get:
+      operationId: getBucket
+      summary: Get a bucket
+      tags:
+      - Buckets
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateBucket
+      summary: Update a bucket
+      tags:
+      - Buckets
+      x-commons-tier: extended
+      x-commons-share: 0.476
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /storage-objects:
+    get:
+      operationId: listStorageObjects
+      summary: List storage objects
+      tags:
+      - Storage Objects
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/StorageObject'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createStorageObject
+      summary: Create a storage object
+      tags:
+      - Storage Objects
+      x-commons-tier: core
+      x-commons-share: 0.7
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /storage-objects/{storage_object_id}:
+    parameters:
+    - $ref: '#/components/parameters/storage_object_id'
+    delete:
+      operationId: deleteStorageObject
+      summary: Delete a storage object
+      tags:
+      - Storage Objects
+      x-commons-tier: core
+      x-commons-share: 0.8
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    get:
+      operationId: getStorageObject
+      summary: Get a storage object
+      tags:
+      - Storage Objects
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateStorageObject
+      summary: Update a storage object
+      tags:
+      - Storage Objects
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+components:
+  schemas:
+    Bucket:
+      $ref: ./schema/bucket.json
+    StorageObject:
+      $ref: ./schema/storage_object.json
+  parameters:
+    bucket_id:
+      name: bucket_id
+      in: path
+      required: true
+      schema:
+        type: string
+    storage_object_id:
+      name: storage_object_id
+      in: path
+      required: true
+      schema:
+        type: string

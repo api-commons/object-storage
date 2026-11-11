@@ -1,0 +1,29 @@
+provider: linode
+apis_io: https://apis.io/providers/linode/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      created_at: created
+      region: region
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/object-storage/buckets
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/object-storage/buckets/{regionId}
+    - openapi/_original/linode-api-v4-official-openapi.json#POST /{apiVersion}/object-storage/buckets
+    - openapi/_original/linode-api-v4-openapi.yml#GET /object-storage/buckets
+  storage_object:
+    path_segment:
+    - keys
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/linode-api-v4-official-openapi.json#DELETE /{apiVersion}/object-storage/keys/{keyId}
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/object-storage/keys
+    - openapi/_original/linode-api-v4-official-openapi.json#GET /{apiVersion}/object-storage/keys/{keyId}
+    - openapi/_original/linode-api-v4-official-openapi.json#POST /{apiVersion}/object-storage/keys
+    - openapi/_original/linode-api-v4-official-openapi.json#PUT /{apiVersion}/object-storage/keys/{keyId}

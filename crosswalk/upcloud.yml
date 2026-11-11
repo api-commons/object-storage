@@ -1,0 +1,17 @@
+provider: upcloud
+apis_io: https://apis.io/providers/upcloud/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/upcloud-openapi.json#DELETE /1.3/object-storage-2/{service-uuid}/buckets/{bucket-name}
+    - openapi/_original/upcloud-openapi.json#GET /1.3/object-storage-2/{service-uuid}/buckets
+    - openapi/_original/upcloud-openapi.json#POST /1.3/object-storage-2/{service-uuid}/buckets
+    - openapi/_original/upcloud-openapi.yml#DELETE /1.3/object-storage-2/{service-uuid}/buckets/{bucket-name}
+    - openapi/_original/upcloud-openapi.yml#GET /1.3/object-storage-2/{service-uuid}/buckets

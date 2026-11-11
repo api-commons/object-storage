@@ -1,0 +1,18 @@
+provider: couchbase
+apis_io: https://apis.io/providers/couchbase/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: name
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/couchbase-capella-management-api-openapi.yml#DELETE /v4/organizations/{organizationId}/projects/{projectId}/clusters/{clusterId}/buckets/{bucketId}
+    - openapi/_original/couchbase-capella-management-api-openapi.yml#GET /v4/organizations/{organizationId}/projects/{projectId}/clusters/{clusterId}/buckets
+    - openapi/_original/couchbase-capella-management-api-openapi.yml#GET /v4/organizations/{organizationId}/projects/{projectId}/clusters/{clusterId}/buckets/{bucketId}
+    - openapi/_original/couchbase-capella-management-api-openapi.yml#POST /v4/organizations/{organizationId}/projects/{projectId}/clusters/{clusterId}/buckets
+    - openapi/_original/couchbase-capella-management-api-openapi.yml#PUT /v4/organizations/{organizationId}/projects/{projectId}/clusters/{clusterId}/buckets/{bucketId}

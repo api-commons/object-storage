@@ -1,0 +1,19 @@
+provider: netapp
+apis_io: https://apis.io/providers/netapp/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - volumes
+    properties:
+      name: name
+      created_at: create_time
+      id: uuid
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/netapp-ontap-openapi.yml#DELETE /storage/volumes/{uuid}
+    - openapi/_original/netapp-ontap-openapi.yml#GET /storage/volumes
+    - openapi/_original/netapp-ontap-openapi.yml#GET /storage/volumes/{uuid}
+    - openapi/_original/netapp-ontap-openapi.yml#PATCH /storage/volumes/{uuid}
+    - openapi/_original/netapp-ontap-openapi.yml#POST /storage/volumes

@@ -1,0 +1,16 @@
+provider: portworx
+apis_io: https://apis.io/providers/portworx/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - bucket
+    properties:
+      name: name
+      id: bucket_id
+      region: region
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/portworx-openapi.yml#DELETE /v1/bucket/{bucket_id}
+    - openapi/_original/portworx-openapi.yml#POST /v1/bucket

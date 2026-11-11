@@ -1,0 +1,18 @@
+provider: leaseweb
+apis_io: https://apis.io/providers/leaseweb/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: name
+      region: region
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/leaseweb-objectstorage-openapi.yaml#DELETE /objectStorages/{objectStorageId}/buckets/{bucketName}
+    - openapi/_original/leaseweb-objectstorage-openapi.yaml#GET /objectStorages/{objectStorageId}/buckets
+    - openapi/_original/leaseweb-objectstorage-openapi.yaml#POST /objectStorages/{objectStorageId}/buckets
+    - openapi/_original/leaseweb-objectstorage-openapi.yaml#PUT /objectStorages/{objectStorageId}/buckets/{bucketName}
+    - openapi/_original/leaseweb-objectstorage-openapi.yml#DELETE /objectStorages/{objectStorageId}/buckets/{bucketName}

@@ -1,0 +1,46 @@
+context: object-storage
+name: Object Storage
+intro: >-
+  The common object-storage vocabulary -- buckets and the objects stored in them -- distilled from
+  the management APIs that already exist.
+tags: [Storage, Object Storage, Cloud Storage, S3, Blob Storage, Backup, Decentralized Storage]
+
+envelope: [_links, _pagination, _results, data, success, errors, count, total, page, meta, links, result, results,
+           value, next, previous, has_more, message, page_info, cursor, total_count, per_page, total_pages, object, contents]
+
+common_fields:
+  id: [uuid, guid, external_id, bucket_id]
+  created_at: [created, created_date, create_time, creation_date, time_created, uploaded, uploaded_at]
+  updated_at: [updated, modified_at, update_time, last_modified, time_updated]
+  name: [title, display_name, bucket_name]
+
+concepts:
+  bucket:
+    segments: [buckets, bucket, containers@storage|blob, volumes@storage]
+    aliases:
+      region: [location, location_constraint, zone]
+      storage_class: [storage_type, tier, class]
+      public: [is_public, acl, visibility, public_access]
+      versioning: [versioning_enabled, versioned]
+  storage_object:
+    path: /storage-objects
+    requires: [bucket]
+    segments: [objects, object, keys, blobs, files@buckets|bucket|storage, uploads@buckets|bucket]
+    aliases:
+      key: [name, path, object_key, file_name]
+      size: [content_length, size_bytes, bytes]
+      content_type: [mime_type, mimetype, media_type]
+      etag: [hash, md5, checksum, content_md5, sha256]
+
+findings:
+  - >-
+    Buckets agree on name and created_at; id reaches 43% and region 33%, because many providers key a
+    bucket by its globally unique name.
+  - >-
+    Objects agree on created_at, key and id; size reaches only 30%. Object metadata mostly travels in
+    response headers (Content-Length, ETag), which a schema census does not read.
+decisions:
+  - >-
+    The object is storage_object and its name is key, the S3 word the market converged on.
+  - >-
+    The S3 API itself is XML and is read in no context yet; it is on the tooling backlog with the XML body reader.

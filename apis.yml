@@ -1,0 +1,48 @@
+aid: common-object-storage
+name: Object Storage
+type: Common
+description: 'The common Object Storage vocabulary, distilled from the harvested OpenAPI of 121 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Storage
+- Object Storage
+- Cloud Storage
+- S3
+- Common Schema
+created: '2026-11-11'
+modified: '2026-11-11'
+url: https://raw.githubusercontent.com/api-commons/object-storage/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-object-storage:object-storage
+  name: Common Object Storage Interface
+  description: The Object Storage interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/object-storage
+  tags:
+  - Storage
+  - Object Storage
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/object-storage/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/object-storage/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/object-storage/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: bucket
+    url: https://raw.githubusercontent.com/api-commons/object-storage/main/schema/bucket.json
+  - type: JSONSchema
+    name: storage_object
+    url: https://raw.githubusercontent.com/api-commons/object-storage/main/schema/storage_object.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/object-storage/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

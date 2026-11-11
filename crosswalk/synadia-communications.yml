@@ -1,0 +1,31 @@
+provider: synadia-communications
+apis_io: https://apis.io/providers/synadia-communications/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#DELETE /kvm/buckets/{bucket}
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#DELETE /objm/buckets/{bucket}
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#GET /kvm/buckets
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#GET /kvm/buckets/{bucket}
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#GET /objm/buckets
+  storage_object:
+    path_segment:
+    - keys
+    properties:
+      created_at: created
+      key: name
+      size: size
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#DELETE /kvm/buckets/{bucket}/keys/{key}
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#DELETE /objm/buckets/{bucket}/keys/{key}
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#GET /kvm/buckets/{bucket}/keys
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#GET /kvm/buckets/{bucket}/keys/{key}
+    - openapi/_original/synadia-communications-http-gateway-openapi.json#GET /objm/buckets/{bucket}/keys

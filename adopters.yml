@@ -1,0 +1,118 @@
+context: object-storage
+generated: '2026-11-11'
+adopters:
+- provider: appwrite
+  apis_io: https://apis.io/providers/appwrite/
+  crosswalk: crosswalk/appwrite.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: cloudflare
+  apis_io: https://apis.io/providers/cloudflare/
+  crosswalk: crosswalk/cloudflare.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: couchbase
+  apis_io: https://apis.io/providers/couchbase/
+  crosswalk: crosswalk/couchbase.yml
+  concepts:
+  - bucket
+- provider: crusoe
+  apis_io: https://apis.io/providers/crusoe/
+  crosswalk: crosswalk/crusoe.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: druva
+  apis_io: https://apis.io/providers/druva/
+  crosswalk: crosswalk/druva.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: filebase
+  apis_io: https://apis.io/providers/filebase/
+  crosswalk: crosswalk/filebase.yml
+  concepts:
+  - bucket
+- provider: insforge
+  apis_io: https://apis.io/providers/insforge/
+  crosswalk: crosswalk/insforge.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: leaseweb
+  apis_io: https://apis.io/providers/leaseweb/
+  crosswalk: crosswalk/leaseweb.yml
+  concepts:
+  - bucket
+- provider: linode
+  apis_io: https://apis.io/providers/linode/
+  crosswalk: crosswalk/linode.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: netapp
+  apis_io: https://apis.io/providers/netapp/
+  crosswalk: crosswalk/netapp.yml
+  concepts:
+  - bucket
+- provider: nexgen-cloud
+  apis_io: https://apis.io/providers/nexgen-cloud/
+  crosswalk: crosswalk/nexgen-cloud.yml
+  concepts:
+  - bucket
+- provider: portworx
+  apis_io: https://apis.io/providers/portworx/
+  crosswalk: crosswalk/portworx.yml
+  concepts:
+  - bucket
+- provider: prisma
+  apis_io: https://apis.io/providers/prisma/
+  crosswalk: crosswalk/prisma.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: pure-storage
+  apis_io: https://apis.io/providers/pure-storage/
+  crosswalk: crosswalk/pure-storage.yml
+  concepts:
+  - bucket
+- provider: sakura-internet
+  apis_io: https://apis.io/providers/sakura-internet/
+  crosswalk: crosswalk/sakura-internet.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: supabase
+  apis_io: https://apis.io/providers/supabase/
+  crosswalk: crosswalk/supabase.yml
+  concepts:
+  - bucket
+- provider: synadia-communications
+  apis_io: https://apis.io/providers/synadia-communications/
+  crosswalk: crosswalk/synadia-communications.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: upcloud
+  apis_io: https://apis.io/providers/upcloud/
+  crosswalk: crosswalk/upcloud.yml
+  concepts:
+  - bucket
+- provider: veeam
+  apis_io: https://apis.io/providers/veeam/
+  crosswalk: crosswalk/veeam.yml
+  concepts:
+  - bucket
+  - storage_object
+- provider: weka
+  apis_io: https://apis.io/providers/weka/
+  crosswalk: crosswalk/weka.yml
+  concepts:
+  - bucket
+- provider: xsky
+  apis_io: https://apis.io/providers/xsky/
+  crosswalk: crosswalk/xsky.yml
+  concepts:
+  - bucket

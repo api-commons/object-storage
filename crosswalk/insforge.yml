@@ -1,0 +1,31 @@
+provider: insforge
+apis_io: https://apis.io/providers/insforge/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: bucketName
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/insforge-storage-openapi.yaml#DELETE /api/storage/buckets/{bucketName}
+    - openapi/_original/insforge-storage-openapi.yaml#GET /api/storage/buckets
+    - openapi/_original/insforge-storage-openapi.yaml#PATCH /api/storage/buckets/{bucketName}
+    - openapi/_original/insforge-storage-openapi.yaml#POST /api/storage/buckets
+  storage_object:
+    path_segment:
+    - objects
+    properties:
+      created_at: uploadedAt
+      key: key
+      size: size
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/insforge-storage-openapi.yaml#DELETE /api/storage/buckets/{bucketName}/objects
+    - openapi/_original/insforge-storage-openapi.yaml#DELETE /api/storage/buckets/{bucketName}/objects/{objectKey}
+    - openapi/_original/insforge-storage-openapi.yaml#GET /api/storage/buckets/{bucketName}/download-strategy/objects/{objectKey}
+    - openapi/_original/insforge-storage-openapi.yaml#GET /api/storage/buckets/{bucketName}/objects
+    - openapi/_original/insforge-storage-openapi.yaml#GET /api/storage/buckets/{bucketName}/objects/{objectKey}

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/object-storage/main/schema/storage_object.json",
+  "title": "Storage Object",
+  "description": "The common storage_object in Object Storage, distilled from 10 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.7,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "created",
+        "created_at",
+        "$createdAt",
+        "uploaded",
+        "uploadedAt",
+        "createdAt",
+        "CreatedAt"
+      ],
+      "format": "date-time"
+    },
+    "key": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.7,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "name",
+        "key",
+        "Name",
+        "Key",
+        "path"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "id",
+        "$id",
+        "bucketId",
+        "ID"
+      ]
+    },
+    "size": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "size"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "status",
+        "Status"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "$updatedAt",
+        "last_modified",
+        "ModifiedAt"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "object-storage",
+    "concept": "storage_object",
+    "providers": 10,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,25 @@
+provider: veeam
+apis_io: https://apis.io/providers/veeam/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/veeam-backup-aws-openapi.yml#GET /api/v1/cloudInfrastructure/buckets
+    - openapi/_original/veeam-backup-aws-openapi.yml#GET /api/v1/cloudInfrastructure/buckets/{bucketId}
+  storage_object:
+    path_segment:
+    - objects
+    properties:
+      key:
+      - name
+      - path
+      id: id
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/veeam-backup-replication-openapi.yml#GET /api/v1/backups/{id}/objects

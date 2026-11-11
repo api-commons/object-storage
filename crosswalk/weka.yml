@@ -1,0 +1,17 @@
+provider: weka
+apis_io: https://apis.io/providers/weka/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name:
+      - name
+      - bucket_name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/weka-openapi-original.json#DELETE /s3/buckets/{bucket}
+    - openapi/_original/weka-openapi-original.json#GET /s3/buckets
+    - openapi/_original/weka-openapi-original.json#POST /s3/buckets

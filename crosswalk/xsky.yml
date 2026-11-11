@@ -1,0 +1,17 @@
+provider: xsky
+apis_io: https://apis.io/providers/xsky/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/xsky-xms-swagger-original.yaml#DELETE /nfs-gateways/{gateway_id}/buckets/{bucket_id}
+    - openapi/_original/xsky-xms-swagger-original.yaml#GET /nfs-gateways/{gateway_id}/buckets
+    - openapi/_original/xsky-xms-swagger-original.yaml#GET /nfs-gateways/{gateway_id}/buckets/{bucket_id}
+    - openapi/_original/xsky-xms-swagger-original.yaml#PATCH /nfs-gateways/{gateway_id}/buckets/{bucket_id}
+    - openapi/_original/xsky-xms-swagger-original.yaml#PUT /nfs-gateways/{gateway_id}/buckets/{bucket_id}

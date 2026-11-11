@@ -1,0 +1,41 @@
+provider: cloudflare
+apis_io: https://apis.io/providers/cloudflare/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: name
+      created_at: creation_date
+      region: location
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#DELETE /accounts/{account_id}/r2/buckets/{bucket_name}
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/r2/buckets
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/r2/buckets/{bucket_name}
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#POST /accounts/{account_id}/r2/buckets
+    - openapi/_original/cloudflare-openapi-original.yml#DELETE /accounts/{account_id}/r2/buckets/{bucket_name}
+  storage_object:
+    path_segment:
+    - keys
+    - objects
+    properties:
+      created_at:
+      - created
+      - uploaded
+      key:
+      - name
+      - key
+      id: id
+      size: size
+      type: type
+      updated_at: last_modified
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#DELETE /accounts/{account_id}/images/v1/keys/{signing_key_name}
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#DELETE /accounts/{account_id}/stream/keys/{identifier}
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/images/v1/keys
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/storage/kv/namespaces/{namespace_id}/keys
+    - openapi/_original/cloudflare-accounts--openapi-original.yml#GET /accounts/{account_id}/stream/keys

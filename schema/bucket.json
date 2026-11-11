@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/object-storage/main/schema/bucket.json",
+  "title": "Bucket",
+  "description": "The common bucket in Object Storage, distilled from 21 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.857,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "name",
+        "Name",
+        "bucketName",
+        "bucket_name"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.524,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "$createdAt",
+        "creation_date",
+        "CreationDate",
+        "create_time"
+      ],
+      "format": "date-time"
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.429,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "id",
+        "$id",
+        "bucketId",
+        "Id",
+        "uuid",
+        "bucket_id"
+      ]
+    },
+    "region": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "region",
+        "location"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "object-storage",
+    "concept": "bucket",
+    "providers": 21,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

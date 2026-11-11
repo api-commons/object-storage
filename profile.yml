@@ -1,0 +1,297 @@
+context: object-storage
+name: Object Storage
+generated: '2026-11-11'
+version: 0.1.0-draft.20261111
+status: draft
+cohort:
+  tags:
+  - Storage
+  - Object Storage
+  - Cloud Storage
+  - S3
+  - Blob Storage
+  - Backup
+  - Decentralized Storage
+  providers_with_harvested_openapi: 121
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded: {}
+duplicates: {}
+shared_specs: {}
+concepts:
+  bucket:
+    segments_seen:
+      buckets: 18
+      bucket: 3
+      volumes: 1
+    providers_exposing: 21
+    providers_with_readable_schema: 21
+    operations:
+    - operation: GET collection
+      providers: 19
+      share: 0.905
+      tier: core
+    - operation: DELETE item
+      providers: 16
+      share: 0.762
+      tier: core
+    - operation: GET item
+      providers: 14
+      share: 0.667
+      tier: core
+    - operation: POST collection
+      providers: 14
+      share: 0.667
+      tier: core
+    - operation: UPDATE item
+      providers: 10
+      share: 0.476
+      tier: extended
+    - operation: POST item
+      providers: 2
+      share: 0.095
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.048
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.048
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 18
+      share: 0.857
+      type: string
+      spellings:
+      - name
+      - Name
+      - bucketName
+      - bucket_name
+    - name: created_at
+      tier: core
+      providers: 11
+      share: 0.524
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - $createdAt
+      - creation_date
+      - CreationDate
+      - create_time
+    - name: id
+      tier: extended
+      providers: 9
+      share: 0.429
+      type: string
+      spellings:
+      - id
+      - $id
+      - bucketId
+      - Id
+      - uuid
+      - bucket_id
+    - name: region
+      tier: extended
+      providers: 7
+      share: 0.333
+      type: string
+      spellings:
+      - region
+      - location
+    long_tail_count: 181
+    long_tail_sample:
+    - type
+    - object_count
+    - public
+    - size
+    - status
+    - updated_at
+    - bucket_type
+    - compression
+    - encryption
+    - endpoint
+    - num_objects
+    - policy
+    - project_id
+    - replicas
+    - space
+    - storage_class
+    - tags
+    - account
+    - account_id
+    - action_status
+    - aggregates
+    - allowed_file_extensions
+    - allowed_mime_types
+    - anonymous_bucket_access_mode
+    - antivirus
+    - archived_at
+    - arrays
+    - as_of
+    - auth_type
+    - autosize
+    - backing_store
+    - basic
+    - billing_history_bucket
+    - billing_history_bucket_details
+    - branch_git_name
+    - branch_id
+    - bucket_acl
+    - bucket_conflict_resolution
+    - bucket_encryption
+    - bucket_lifecycle_configuration
+  storage_object:
+    segments_seen:
+      keys: 8
+      objects: 3
+      files: 1
+    providers_exposing: 10
+    providers_with_readable_schema: 10
+    operations:
+    - operation: GET collection
+      providers: 10
+      share: 1.0
+      tier: core
+    - operation: DELETE item
+      providers: 8
+      share: 0.8
+      tier: core
+    - operation: POST collection
+      providers: 7
+      share: 0.7
+      tier: core
+    - operation: GET item
+      providers: 6
+      share: 0.6
+      tier: core
+    - operation: UPDATE item
+      providers: 6
+      share: 0.6
+      tier: core
+    - operation: DELETE collection
+      providers: 2
+      share: 0.2
+      tier: long-tail
+    - operation: POST item
+      providers: 2
+      share: 0.2
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.1
+      tier: long-tail
+    properties:
+    - name: created_at
+      tier: core
+      providers: 7
+      share: 0.7
+      type: string
+      spellings:
+      - created
+      - created_at
+      - $createdAt
+      - uploaded
+      - uploadedAt
+      - createdAt
+      - CreatedAt
+    - name: key
+      tier: core
+      providers: 7
+      share: 0.7
+      type: string
+      spellings:
+      - name
+      - key
+      - Name
+      - Key
+      - path
+    - name: id
+      tier: core
+      providers: 6
+      share: 0.6
+      type: string
+      spellings:
+      - id
+      - $id
+      - bucketId
+      - ID
+    - name: size
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: integer
+      spellings:
+      - size
+    - name: status
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - status
+      - Status
+    - name: type
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - type
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - $updatedAt
+      - last_modified
+      - ModifiedAt
+    long_tail_count: 104
+    long_tail_sample:
+    - access_key_id
+    - bucket
+    - content_type
+    - description
+    - key_id
+    - metadata
+    - name
+    - permissions
+    - secret
+    - secret_key
+    - access_key
+    - accessed_at
+    - alias
+    - api_key
+    - app_id
+    - bucket_access
+    - chunks
+    - chunks_total
+    - chunks_uploaded
+    - compression
+    - created_by_id
+    - created_by_name
+    - custom_metadata
+    - datasets
+    - days_until_next_rotation
+    - deleted
+    - deletion_scheduled_after
+    - delta
+    - digest
+    - encryption
+    - endpoint
+    - endpoint_type
+    - etag
+    - expiration
+    - expire
+    - expire_at
+    - expires_at
+    - filters
+    - folder
+    - from

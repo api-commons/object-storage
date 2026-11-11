@@ -1,0 +1,43 @@
+provider: appwrite
+apis_io: https://apis.io/providers/appwrite/
+context: object-storage
+generated: '2026-11-11'
+concepts:
+  bucket:
+    path_segment:
+    - buckets
+    properties:
+      name: name
+      created_at:
+      - $createdAt
+      - createdAt
+      id:
+      - $id
+      - bucketId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /storage/buckets/{bucketId}
+    - openapi/_original/appwrite-open-api3-latest.json#GET /storage/buckets
+    - openapi/_original/appwrite-open-api3-latest.json#GET /storage/buckets/{bucketId}
+    - openapi/_original/appwrite-open-api3-latest.json#POST /storage/buckets
+    - openapi/_original/appwrite-open-api3-latest.json#PUT /storage/buckets/{bucketId}
+  storage_object:
+    path_segment:
+    - keys
+    - files
+    properties:
+      created_at: $createdAt
+      key:
+      - name
+      - key
+      id:
+      - $id
+      - bucketId
+      updated_at: $updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /account/keys/{keyId}
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /apps/{appId}/keys/{keyId}
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /organization/keys/{keyId}
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /project/keys/{keyId}
+    - openapi/_original/appwrite-open-api3-latest.json#DELETE /storage/buckets/{bucketId}/files/{fileId}
